@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { ShieldCheck, RefreshCw, FileCheck, TimerReset, BarChart3 } from 'lucide-react';
+import { ShieldCheck, RefreshCw, FileCheck, TimerReset, BarChart3, LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface Feature {
   id: number;
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string; size?: number }>;
+  icon: LucideIcon;
   color: string;
 }
 

@@ -1,12 +1,12 @@
 
 import React from 'react';
 import SecurityChart from './SecurityChart';
-import { ShieldAlert, TrendingUp, DollarSign, Zap, RefreshCw } from 'lucide-react';
+import { ShieldAlert, TrendingUp, DollarSign, Zap, RefreshCw, LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import CodeSnippet from './CodeSnippet';
 
 interface ReasonProps {
-  icon: React.ComponentType<{ className?: string; size?: number }>;
+  icon: LucideIcon;
   title: string;
   description: string;
 }
