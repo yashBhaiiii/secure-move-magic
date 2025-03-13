@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,43 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our security theme
+				blue: {
+					50: "#E6F0FF",
+					100: "#CCE0FF",
+					200: "#99C2FF",
+					300: "#66A3FF",
+					400: "#3385FF",
+					500: "#0066FF",
+					600: "#0052CC",
+					700: "#003D99",
+					800: "#002966",
+					900: "#001433"
+				},
+				gray: {
+					50: "#F9FAFB",
+					100: "#F3F4F6",
+					200: "#E5E7EB",
+					300: "#D1D5DB",
+					400: "#9CA3AF",
+					500: "#6B7280",
+					600: "#4B5563",
+					700: "#374151",
+					800: "#1F2937",
+					900: "#111827"
+				},
+				red: {
+					50: "#FEF2F2",
+					100: "#FEE2E2",
+					200: "#FECACA",
+					300: "#FCA5A5",
+					400: "#F87171",
+					500: "#EF4444",
+					600: "#DC2626",
+					700: "#B91C1C",
+					800: "#991B1B",
+					900: "#7F1D1D"
 				}
 			},
 			borderRadius: {
@@ -84,11 +122,51 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'shimmer': {
+					'100%': { transform: 'translateX(100%)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'pulse-slow': 'pulse-slow 3s infinite ease-in-out',
+				'float': 'float 5s infinite ease-in-out',
+				'shimmer': 'shimmer 2s infinite'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'grid-pattern': 'url("/images/grid-pattern.svg")',
+				'hero-glow': 'radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15), transparent 60%)'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+				'mono': ['SF Mono', 'JetBrains Mono', 'Menlo', 'monospace']
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100ch',
+					},
+				},
 			}
 		}
 	},
