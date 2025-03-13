@@ -86,8 +86,7 @@ export default {
 					600: "#4B5563",
 					700: "#374151",
 					800: "#1F2937",
-					900: "#111827",
-					950: "#0A0F1A"
+					900: "#111827"
 				},
 				red: {
 					50: "#FEF2F2",
@@ -142,11 +141,7 @@ export default {
 				},
 				'shimmer': {
 					'100%': { transform: 'translateX(100%)' }
-				},
-                'glow': {
-                    '0%, 100%': { opacity: '1' },
-                    '50%': { opacity: '0.6' }
-                }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -155,15 +150,12 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'pulse-slow': 'pulse-slow 3s infinite ease-in-out',
 				'float': 'float 5s infinite ease-in-out',
-				'shimmer': 'shimmer 2s infinite',
-                'glow': 'glow 3s infinite ease-in-out'
+				'shimmer': 'shimmer 2s infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'grid-pattern': 'url("/images/grid-pattern.svg")',
-				'hero-glow': 'radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15), transparent 60%)',
-                'dark-dots': 'radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
-                'dark-grid': 'linear-gradient(to right, rgba(75, 85, 99, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(75, 85, 99, 0.1) 1px, transparent 1px)'
+				'hero-glow': 'radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15), transparent 60%)'
 			},
 			fontFamily: {
 				'sans': ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
@@ -173,39 +165,6 @@ export default {
 				DEFAULT: {
 					css: {
 						maxWidth: '100ch',
-                        color: 'rgb(229, 231, 235)',
-                        a: {
-                          color: 'rgb(59, 130, 246)',
-                          '&:hover': {
-                            color: 'rgb(96, 165, 250)',
-                          },
-                        },
-                        h1: {
-                          color: 'rgb(255, 255, 255)',
-                        },
-                        h2: {
-                          color: 'rgb(255, 255, 255)',
-                        },
-                        h3: {
-                          color: 'rgb(255, 255, 255)',
-                        },
-                        h4: {
-                          color: 'rgb(255, 255, 255)',
-                        },
-                        blockquote: {
-                          color: 'rgb(229, 231, 235)',
-                          borderLeftColor: 'rgb(75, 85, 99)',
-                        },
-                        code: {
-                          color: 'rgb(249, 250, 251)',
-                          backgroundColor: 'rgb(31, 41, 55)',
-                        },
-                        pre: {
-                          backgroundColor: 'rgb(17, 24, 39)',
-                        },
-                        strong: {
-                          color: 'rgb(249, 250, 251)',
-                        },
 					},
 				},
 			}

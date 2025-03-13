@@ -8,13 +8,45 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
+    --background: 210 38% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 11%;
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 217.2 91.2% 59.8%;
@@ -35,8 +67,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-
-    --radius: 0.75rem;
   }
 }
 
@@ -50,7 +80,7 @@
   }
 
   body {
-    @apply bg-gray-900 text-gray-100 font-sans;
+    @apply bg-background text-foreground font-sans;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
   
@@ -59,33 +89,29 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-gray-800;
+    @apply bg-gray-100 dark:bg-gray-800;
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-gray-700;
+    @apply rounded-full bg-gray-300 dark:bg-gray-600;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-600;
-  }
-
-  a {
-    @apply text-blue-400 hover:text-blue-300 transition-colors;
+    @apply bg-gray-400 dark:bg-gray-500;
   }
 }
 
 @layer components {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700;
   }
   
   .shimmer {
-    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent;
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
   }
   
   .glass-card {
-    @apply bg-gray-800/80 backdrop-blur-lg border border-gray-700/50 shadow-lg;
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-lg;
   }
   
   .highlight-dot {
@@ -93,38 +119,22 @@
   }
   
   .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
   }
   
   .heading-xl {
-    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white;
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight;
   }
   
   .heading-lg {
-    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white;
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight;
   }
   
   .heading-md {
-    @apply text-2xl sm:text-3xl font-bold tracking-tight text-white;
+    @apply text-2xl sm:text-3xl font-bold tracking-tight;
   }
   
   .heading-sm {
-    @apply text-xl sm:text-2xl font-bold tracking-tight text-white;
-  }
-
-  .dark-card {
-    @apply bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-xl hover:shadow-blue-900/20 transition-all duration-300;
-  }
-
-  .glow {
-    @apply relative z-0;
-  }
-
-  .glow::before {
-    @apply content-[''] absolute -z-10 -inset-1 rounded-lg opacity-75 blur-xl bg-gradient-to-r from-blue-600 to-indigo-600;
-  }
-
-  .dark-gradient {
-    @apply bg-gradient-to-br from-gray-900 to-gray-800;
+    @apply text-xl sm:text-2xl font-bold tracking-tight;
   }
 }
